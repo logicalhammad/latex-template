@@ -1,0 +1,27 @@
+% ==============================
+% Modern Table Template
+% ==============================
+
+% |l| means left aligned with border
+% |c| means centered
+% |>{\bfseries}c| means centered AND bolded column
+
+\begin{table}[H]
+    \centering
+    \setModernTableStyle % Applies the colors and spacing
+    
+    % Defining columns: 
+    \begin{tabularx}{\textwidth}{|l|X|c|}
+        \hline
+        % Header Row: Use \tableHeaderStyle
+        \tableHeaderStyle Column 1 & Column 2 (Wraps text) & Column 3 \\ \thickhline
+        
+        % Data Rows
+        Row 1 Data & Long text will wrap nicely to the next line here. & Yes \\ \hline
+        Row 2 Data & 200 & No  \\ \hline
+        Row 3 Data & 300 & Yes \\ \hline
+    \end{tabularx}
+    
+    \caption{Description of the modern table}
+    \label{tab:modern_example}
+\end{table}

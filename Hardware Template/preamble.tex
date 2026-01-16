@@ -1,0 +1,167 @@
+% ------------------------------
+% Page Layout & Geometry
+% ------------------------------
+\usepackage[
+  a4paper,
+  left=1.25in,
+  right=1in,
+  top=1in,
+  bottom=1in
+]{geometry}
+\raggedbottom
+
+\usepackage{placeins}
+\usepackage{booktabs}
+
+% ==============================
+% Fonts & Math
+% ==============================
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{amsmath}
+
+% ==============================
+% Line Spacing & Paragraphs
+% ==============================
+\usepackage{setspace}
+\onehalfspacing
+% Standard paragraph settings from official template
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% ==============================
+% Graphics, Figures & Floats
+% ==============================
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{caption}
+\DeclareCaptionFont{gray}{\color{gray}}
+\captionsetup{font={it,gray}}
+% \captionsetup[table]{position=top, skip=5pt}
+% \captionsetup[figure]{position=bottom, skip=5pt}
+\usepackage{subcaption}
+\usepackage{float}
+% Ensure figures are numbered by section as per template
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+% ============================== 
+% Tables & Lists
+% ============================== 
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+% \usepackage[table]{xcolor} % Moved up to Graphics section
+\usepackage{enumitem}
+
+% Import Custom Table Styles
+\input{tables/table_config.tex}
+
+% ============================== 
+% Code Listings
+% ============================== 
+\usepackage{listings}
+
+% ============================== 
+% Bibliography
+% ============================== 
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+% ============================== 
+% Hyperlinks
+% ============================== 
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage{bookmark}
+\usepackage{xltabular} % For tables that break across pages and use X columns
+\usepackage[titles]{tocloft} % Fix TOC formatting
+
+% ============================== 
+% Header/Footer Control
+% ============================== 
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt} % Fix warning: headheight too small
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+
+% Header content
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+
+% Horizontal line in header
+\renewcommand{\headrulewidth}{0.4pt}
+
+% No footer
+\renewcommand{\footrulewidth}{0pt}
+
+% Redefine 'plain' style (used on Chapter pages) to match official template
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% ============================== 
+% Heading Formatting
+% ============================== 
+\usepackage{titlesec}
+
+% Chapter (First-Level Heading)
+\titleformat{\chapter}
+  {\normalfont\bfseries\fontsize{16}{18}\selectfont}
+  {\thechapter.}
+  {1em}
+  {}
+
+\titlespacing*{\chapter}
+  {0pt}
+  {0pt}
+  {24pt}
+
+% Section (Second-Level Heading)
+\titleformat{\section}
+  {\normalfont\bfseries\fontsize{14}{16}\selectfont}
+  {\thesection}
+  {1em}
+  {}
+
+\titlespacing*{\section}
+  {0pt}
+  {24pt}
+  {12pt}
+
+% Subsection (Third-Level Heading)
+\titleformat{\subsection}
+  {\normalfont\bfseries\fontsize{12}{14}\selectfont}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titlespacing*{\subsection}
+  {0pt}
+  {24pt}
+  {12pt}
+
+% Subsubsection (Fourth-Level Heading)
+\titleformat{\subsubsection}
+  {\normalfont\bfseries\fontsize{12}{14}\selectfont}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+% Numbering Depth configuration
+% 0 = Chapter
+% 1 = Section
+% 2 = Subsection
+% 3 = Subsubsection
+\setcounter{secnumdepth}{3}
+
+% Table of Contents Depth
+% Uncomment the line corresponding to the depth you want:
+% \setcounter{tocdepth}{1} % Show only Chapters and Sections
+% \setcounter{tocdepth}{2} % Show Chapters, Sections, and Subsections
+\setcounter{tocdepth}{3}   % Show Chapters, Sections, Subsections, and Subsubsections
+
+% Match official template section numbering
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}

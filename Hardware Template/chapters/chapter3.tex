@@ -1,0 +1,181 @@
+
+% =============================================================================
+%                       Chapter 3: System Design
+% =============================================================================
+
+
+\chapter*{Chapter 3}  
+\addcontentsline{toc}{chapter}{Chapter 3} 
+\markboth{System Design}{System Design}
+\section{System Design}
+
+The purpose of this chapter is to provide information that is complementary to the code. Without an adequate design that delivers required function as well as quality attributes, the project will fail. But communicating architecture to its stakeholders is as important a job as creating it in the first place.
+
+There are two views that are considered while defining software architecture. There are specific design artifacts that belong to each view. Description of such artifacts is given below. You may select the artifacts depending on the nature of your project.
+
+% ----- BULLET POINTS ----- 
+\begin{itemize}
+    \item \textbf{Structural View}
+    \begin{itemize}
+        \item Architecture diagram
+        \item Module structure diagram
+        \item Component diagram
+        \item Class diagram
+    \end{itemize}
+    
+    \item \textbf{Behavioral View}
+    \begin{itemize}
+        \item Sequence diagram
+        \item Activity diagram
+        \item State machine diagram
+    \end{itemize}
+\end{itemize}
+
+At a high level, a software architecture document includes:
+
+% ----- NUMBERED LIST ----- 
+\begin{enumerate}
+    \item An outline description of the software design, including major software components and their interactions.
+    \item A common understanding of requirements, constraints and principles that influence the architecture.
+    \item A description of the hardware and software platforms on which the system is built and deployed.
+    \item Explicit justification of how the architecture satisfies the above mentioned points.
+\end{enumerate}
+
+
+Design pattern is a description or template for how to solve a problem that can be used in many different situations. Object-oriented design patterns typically show relationships and interactions between classes or objects, without specifying the final application classes or objects that are involved.
+
+It is important that you justify its design, for example, by discussing the implications of constraints on your solution and different design choices, and then giving reasons for making the choices you did. At each stage of the design you should mention what kind of design patters have you followed while designing your system. You should identify which design pattern among the existing patterns are you following while designing your project.
+
+\subsection{Software Architecture}
+In system architecture, students need to identify and select the suitable 
+architecture from the following mentioned architectures based on the 
+project scope, system requirements, and related functionality.
+
+% ----- BULLET POINTS ----- 
+\begin{itemize}
+    \item \textbf{Layered:} Common in eCommerce applications. Messages pass through multiple layers. 
+    \item \textbf{Event-driven:} Suitable for agile and high-performance systems. Data blocks interact with modules.
+    \item \textbf{Microkernel:} Independent plug-in modules with a scheduler.
+    \item \textbf{Microservices:} Each component is deployed as a separate unit (e.g., Netflix).
+    \item \textbf{Space-Based:} Distributed shared memory, commonly used in bidding/auction sites.
+    \item \textbf{Client-Server:} Example: Email Server.
+    \item \textbf{Master-Slave:} Database applications requiring heavy multitasking.
+    \item \textbf{Pipe-Filter:} Processes data in streams (e.g., compilers).
+    \item \textbf{Broker:} Structures distributed systems with decoupled clients, servers, and brokers.
+    \item \textbf{Peer-to-Peer:} Individual components act as both client and server (e.g., Skype, BitTorrent, Napster).
+\end{itemize}
+
+\noindent
+\textbf{Link:} \href{https://www.simform.com/blog/software-architecture-patterns/}{https://www.simform.com/blog/software-architecture-patterns/}
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.9\textwidth]{figures/arc.png} 
+    \caption{Software Architecture Diagram}
+    \label{fig:arch}
+\end{figure}
+
+Fig. \ref{fig:arch} illustrates common application architecture with components grouped by different areas of concern. You should think of architecture as the strategy for how you will build the system. An architectural “layer” is the top-level logical view, or an abstraction, of your design. 
+
+\subsection{Components and Connector}
+However, all complete IoT systems are the same in that they represent the integration of four distinct components: sensors/devices, connectivity, data processing, and a user interface.
+
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.9\textwidth]{figures/hardware.png} 
+    \caption{List of Hardware’s}
+    \label{fig:hardware}
+\end{figure}
+
+\subsection{Hardware Specifications }
+List of all the hardware's required for the project along with their specifications.
+
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.7\textwidth]{figures/dia/hardwaretable.png} 
+    \caption{List of Hardware’s}
+    \label{fig:hardwaretable}
+\end{figure}
+\subsection{Communication Protocols}
+Identify and select appropriate communication protocol from the following mention protocols for data transmission in the proposed IoT project.
+
+
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.7\textwidth]{figures/dia/protocol.png} 
+    \caption{List of Hardware's}
+    \label{fig:protocol}
+\end{figure}
+\subsection{Data Flow Diagram / Flowchart}
+A data flow diagram shows the way information flows through a process or system. It includes data inputs and outputs, data stores, and the various subprocesses the data moves through. DFDs are built using standardized symbols and notation to describe various entities and their relationships.
+\subsection{Class Diagram}
+Class Diagram as shown in Fig. \ref{fig:classdiagram} provides an overview of the target system by describing the objects and classes inside the system and the relationships between them. It provides a wide variety of usages; from modeling the domain-specific data structure to detailed design of the target system. 
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.7\textwidth]{figures/dia/classdiagram.png} 
+    \caption{List of Hardware's}
+    \label{fig:classdiagram}
+\end{figure}
+
+\subsection{Sequence Diagram}
+Sequence diagrams, when used in conjunction with class diagrams; provide an extremely effective communication mechanism. UML sequence diagrams as shown in Figure. \ref{fig:sequence} are used to show how objects interact in a given situation.
+You can use a class diagram to illustrate the relationships between the classes, and the sequence diagram lets you show the messages sent among the instances of these classes and the order in which they are sent. When an object sends a message to another object, it implies that the two classes have a relationship that must be shown on a class diagram.
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.9\textwidth]{figures/image05.png} 
+    \caption{Sequence Diagram}
+    \label{fig:sequence}
+\end{figure}
+
+
+\subsection{Entity Relationship Diagram}
+Entity relationship model diagram (ERD) is a conceptual representation of the data in a software system. During detail design this model is mapped in to the physical database model. There are different diagramming conventions available for creating ER diagrams. A sample ERD is shown in Figure \ref{fig:ERD}.
+
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.9\textwidth]{figures/image06.png} 
+    \caption{Entity Relationship Diagram}
+    \label{fig:ERD}
+\end{figure}
+
+
+
+
+\subsection{Database Schema}
+A database schema represents the logical configuration of all or part of a relational database. It can exist both as a visual representation and as a set of rules known as integrity constraints that govern a database. These rules are expressed in a data definition language, such as SQL. A database schema indicates how the entities that make up the database relate to one another, including tables, views, stored procedures, and more. A database scheme includes information related to primary and secondary keys, normalization and indexing.
+
+You may present database scheme using front end tool of any DBMS or any other design tools such as Visio or Enterprise Architecture. A sample database scheme is shown in Figure. \ref{fig:database}.
+
+.
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.9\textwidth]{figures/image08.png} 
+    \caption{Database Schema}
+    \label{fig:database}
+\end{figure}
+
+
+
+\setcounter{chapter}{3}           % Ensures this will be Chapter 3

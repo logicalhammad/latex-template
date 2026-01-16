@@ -1,0 +1,60 @@
+% ==============================
+%  CUST SE FYP REPORT TEMPLATE
+% ==============================
+
+\documentclass[12pt,oneside]{report}
+
+\input{preamble} % keep your preamble as is
+
+% ==============================
+% Document Begins
+% ==============================
+\begin{document}
+
+% ==============================
+% Front Matter (Roman numbering)
+% ==============================
+\pagenumbering{roman}
+\setcounter{page}{1}
+\floatplacement{figure}{H}
+
+\input{frontmatter/titlepage}
+\input{frontmatter/approval}
+\input{frontmatter/declaration}
+\input{frontmatter/acknowledgements}
+\input{frontmatter/dedication}
+\input{frontmatter/executive_summary}
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+\input{frontmatter/blank}
+
+% \clearpage
+
+% ==============================
+% Main Matter (Arabic numbering)
+% ==============================
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ==============================
+%           Chapters
+% ==============================
+
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+
+% ==============================
+%           End Matter
+% ==============================
+
+\input{endmatter/ending.tex}
+
+\end{document}
