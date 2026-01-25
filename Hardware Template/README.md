@@ -1,5 +1,7 @@
 # 📘 Final Year Project LaTeX Template
 
+Last updated: 25th January, 2026
+
 Follow this template to create your Final Year Project (FYP) in LaTeX **without needing to learn LaTeX first**.
 
 📌 **Important:**
