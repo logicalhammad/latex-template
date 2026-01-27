@@ -62,6 +62,21 @@
 % ============================== 
 \usepackage{listings}
 
+\lstset{
+    breaklines=true,                % Automatic line breaking
+    breakatwhitespace=false,        % Break lines anywhere, not just at whitespace
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % Show continuation symbol
+    basicstyle=\ttfamily\small,     % Use small monospace font
+    columns=flexible,               % Better spacing
+    keepspaces=true,                % Keep spaces in code
+    showstringspaces=false,         % Don't show spaces in strings
+    frame=single,                   % Add frame around code
+    xleftmargin=\parindent,         % Indent code blocks
+    numbers=left,                   % Line numbers on left
+    numberstyle=\tiny\color{gray},  % Style for line numbers
+    tabsize=2                       % Tab size
+}
+
 % ============================== 
 % Bibliography
 % ============================== 
