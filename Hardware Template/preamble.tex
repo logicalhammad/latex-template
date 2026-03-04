@@ -136,7 +136,7 @@
 % Section (Second-Level Heading)
 \titleformat{\section}
   {\normalfont\bfseries\fontsize{16}{18}\selectfont}
-  {\thesection}
+  {\thesection.}
   {1em}
   {}
 
@@ -148,7 +148,7 @@
 % Subsection (Third-Level Heading)
 \titleformat{\subsection}
   {\normalfont\bfseries\fontsize{14}{16}\selectfont}
-  {\thesubsection}
+  {\thesubsection.}
   {1em}
   {}
 
@@ -160,7 +160,7 @@
 % Subsubsection (Fourth-Level Heading)
 \titleformat{\subsubsection}
   {\normalfont\bfseries\fontsize{13}{15}\selectfont}
-  {\thesubsubsection}
+  {\thesubsubsection.}
   {1em}
   {}
 
@@ -178,6 +178,11 @@
 \setcounter{tocdepth}{3}   % Show Chapters, Sections, Subsections, and Subsubsections
 \renewcommand{\contentsname}{Table of Contents}
 
+% Add trailing dots to numbers in the TOC as well
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftsubsubsecaftersnum}{.}
 % Match official template section numbering style
 \usepackage{chngcntr}
 \counterwithout{section}{chapter}
