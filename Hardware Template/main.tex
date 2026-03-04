@@ -25,10 +25,20 @@
 \input{frontmatter/dedication}
 \input{frontmatter/executive_summary}
 
+{
+% Apply the centered 16/20pt styling specifically to TOC, LOF, and LOT
+\titleformat{name=\chapter,numberless}[block]
+  {\centering\normalfont\bfseries\fontsize{16pt}{20pt}\selectfont}
+  {}
+  {0pt}
+  {}
+\titlespacing*{name=\chapter,numberless}
+  {0pt}{-0.15cm}{0.5cm}
 
 \tableofcontents
 \listoffigures
 \listoftables
+}
 \input{frontmatter/blank}
 
 % \clearpage

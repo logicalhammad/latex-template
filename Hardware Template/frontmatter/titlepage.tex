@@ -3,57 +3,36 @@
 % ==============================================================================
 
 % ------------------------------
-% Page 1: Outer Cover Page
-% ------------------------------
-\begin{titlepage}
-  \centering
-
-  % Header Title
-  {\LARGE Hardware Based Final Year Projects \par}
-  \vspace{3cm}
-
-  % Logo
-  \includegraphics[width=0.35\textwidth]{figures/general/cust-logo-1.jpeg}
-  \vspace{6cm}
-
-  % Footer Info
-  {\large BS Software Engineering \\ 
-  Department of Software Engineering \\ 
-  \textbf{Capital University of Science and Technology, Islamabad} \par}
-  \vspace{1cm}
-
-\end{titlepage}
-
-% ------------------------------
-% Page 2: Inner Title Page
+% Title Page
 % ------------------------------
 \begin{titlepage}
   \centering
 
   % Project Title
-  {\Huge \textbf{Project Title}} \\[2cm]
+  {\fontsize{24pt}{28pt}\selectfont \textbf{Project Title}} \\[2cm]
 
   % University Logo
   \includegraphics[width=0.35\textwidth]{figures/general/cust-logo-1.jpeg} \\[2cm]
 
   % Student Names with Registration Numbers
-  \begin{tabular}{c c}
-    \textbf{Name 1} & (Reg1) \\
-    \textbf{Name 2} & (Reg2) \\
-    \textbf{Name 3} & (Reg3) \\
-  \end{tabular} \\[1.5cm]
+  {\fontsize{16pt}{20pt}\selectfont
+  \begin{tabular}{l @{\hspace{2cm}} c}
+    \textbf{Name 1} & \textbf{(Reg1)} \\
+    \textbf{Name 2} & \textbf{(Reg2)} \\
+    \textbf{Name 3} & \textbf{(Reg3)} \\
+  \end{tabular}} \\[1.5cm]
 
   % Supervisor
-  {\Large \textbf{Supervised By}} \\[0.5cm]
-  {\large Supervisor Name} \\[2cm]
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Supervised By}} \\[0.5cm]
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Supervisor Name}} \\[2cm]
 
   % Semester / Program
-  {\Large Spring 2023} \\[0.5cm]
-  {\Large Program Name} \\[0.5cm]
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Spring 2026}} \\[0.5cm]
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Program Name}} \\[0.5cm]
 
   % Department and University
-  {\large Department of Software Engineering} \\[0.5cm]
-  {\large Capital University of Science \& Technology, Islamabad} \\
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Department of Software Engineering}} \\[0.5cm]
+  {\fontsize{16pt}{20pt}\selectfont \textbf{Capital University of Science \& Technology, Islamabad}} \\
 
 \end{titlepage}
 
@@ -76,7 +55,7 @@
 \begin{center}
   \begin{minipage}{0.7\textwidth}
     \centering
-    {\LARGE \textbf{Project Report}} \\[0.5cm]
+    {\fontsize{16pt}{20pt}\selectfont \textbf{Project Report}} \\[0.5cm]
   \end{minipage}%
   \begin{minipage}{0.29\textwidth}
     \flushright
@@ -145,37 +124,31 @@
   NAME & REG NO & EMAIL \\ \hline
 \end{tabularx}
 
-\vspace{0.5cm}
+\vspace{1.5cm}
 
 % Signatures Section
 \noindent
 \begin{minipage}{0.50\textwidth}
-  \begin{tabular}{|>{\columncolor{black}\color{white}\centering\arraybackslash}m{6cm}|}
+  \begin{tabular}{|>{\columncolor{black}\color{white}\centering\arraybackslash}m{7cm}|}
     \hline
     MEMBERS' SIGNATURES \\
-  \end{tabular} \\[0.8cm]
-  \rule{6.5cm}{0.4pt} \\[0.5cm]
-  \rule{6.5cm}{0.4pt} \\[0.5cm]
-  \rule{6.5cm}{0.4pt}
+  \end{tabular} \\[1.3cm]
+  \rule{7.5cm}{0.4pt} \\[0.8cm]
+  \rule{7.5cm}{0.4pt} \\[0.8cm]
+  \rule{7.5cm}{0.4pt}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
   \raggedleft % Align content to the right
   \fbox{
     \parbox{6cm}{
-      \vspace{2.3cm}
+      \vspace{3.6cm}
       \centering \textbf{Supervisor's Signature}
-      \vspace{2.3cm}
+      \vspace{1cm}
     }
   }
 \end{minipage}
 
 \vfill
-
-% Footer Notes (Remove these)
-{\footnotesize
-  \textit{Note 1: This paper must be signed by your supervisor} \\[0.1cm]
-  \textit{Note 2: Submit a CD with the report, source code, schematics, and executable}
-}
 
 
