@@ -169,6 +169,17 @@
   {1em}
   {}
 
+% Custom Item Heading
+\newcounter{itemheading}[subsubsection]
+\renewcommand{\theitemheading}{\thesubsubsection.\alph{itemheading}}
+\newcommand{\itemheading}[1]{%
+  \par\addvspace{12pt}%
+  \refstepcounter{itemheading}%
+  \noindent%
+  {\fontsize{11}{13}\selectfont\bfseries\itshape\underline{\theitemheading. #1}}%
+  \par\nobreak\vspace{6pt}%
+}
+
 % Numbering Depth configuration
 % 0 = Chapter
 % 1 = Section
