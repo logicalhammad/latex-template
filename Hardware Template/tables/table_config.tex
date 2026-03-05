@@ -10,7 +10,7 @@
 % Custom Table Style Command
 % Usage: Call \setModernTableStyle inside the table environment before \begin{tabular}
 \newcommand{\setModernTableStyle}{%
-    \rowcolors{2}{white}{TableRowAltColor} % Alternating colors: Start at row 2, odd=white, even=alt
+    \rowcolors{2}{TableRowAltColor}{white} % Alternating colors: Start at row 2, odd=alt, even=white
     \arrayrulecolor{TableBorderColor}      % Set global border color
     \renewcommand{\arraystretch}{1.3}      % More vertical spacing
     \setlength{\tabcolsep}{10pt}           % More horizontal spacing
@@ -23,8 +23,6 @@
     \renewcommand{\arraystretch}{1.0}
     \setlength{\tabcolsep}{6pt}
 }
-
-% Add more table styles here
 
 % Define Thick Border Command
 \newlength{\thickarraysrulewidth}

@@ -17,194 +17,124 @@ You should write SRS in precise, clear and plain language so that it can be revi
 
 Requirements specification involves frequent communication with system users to determine specific feature expectations, resolution of conflict or ambiguity in requirements as demanded by the various users or groups of users and documentation of all aspects of the project development process from start to finish. Requirements are a description of how a system should behave or a description of system properties or attributes. It can alternatively be a statement of 'what' an application is expected to do.
 
-\subsection{Functional Requirements}
-The Functional Requirements Specification documents the operations and activities that a system must be able to perform. The Functional Requirements Specification is described in such a way that anyone from non-technical audience can understand. Readers should understand the system, but no particular technical knowledge should be required to understand the document.
+\subsection{Epics}
 
-Functional Requirements should include:
+Epics are large, high-level features that describe significant functionalities of a system or in simply a functionality with some business value. They represent broad goals or requirements that are too big to be completed in a single iteration and are therefore broken down into smaller, manageable user stories. Epics help in organizing work, maintaining a big-picture view, and aligning development with business objectives.
 
-% ----- BULLET POINTS -----
-\begin{itemize}  % adds indentation for better readability
-    \item Descriptions of data to be entered into the system
-    \item Descriptions of operations performed by each screen
-    \item Descriptions of work-flows performed by the system
-    \item Descriptions of system reports or other outputs
-    \item Who can enter the data into the system
-    \item How the system meets applicable regulatory requirements
-\end{itemize}
+Its \textit{Syntax} is:
 
-% This sets the table number to 2.1.1
-\renewcommand{\thetable}{\thesection.\arabic{table}}
-\setcounter{table}{0}  % First table in this section will be 2.1.1
+Epic: <Title/Theme>
+Description: As a \textit{<role>}, I want \textit{<high-level goal>} so that \textit{<business value>}.
 
-% ----- TABLE ----- 
-\begin{table}[H]
-    \centering
-    \setModernTableStyle % Applies the colors and spacing
-    
-    % Defining columns:     
-    \begin{xltabular}{\textwidth}{|c|X|c|c|}
-        \caption{Functional Requirements} \label{tab:functional_requirements} \\
-        \hline
-        % Header Row: Use \tableHeaderStyle
-        \tableHeaderStyle \bfseries{S. No.} & \bfseries{Functional Requirement} & \bfseries{Type} & \bfseries{Status} \\ \thickhline
-        \endfirsthead
-        
-        \hline
-        \tableHeaderStyle \bfseries{S. No.} & \bfseries{Functional Requirement} & \bfseries{Type} & \bfseries{Status} \\ \thickhline
-        \endhead
-        
-        % Data Rows
-        1 & User Registration System with modern colors and solid security features & Input & High \\ \hline
-        2 & Login Authentication Module & Process & High \\ \hline
-        3 & Generating Monthly Reports & Output & Medium \\ \hline
-    \end{xltabular}
-\end{table}
+\subsubsection{Epic 1}
 
+Epic 1, its title and its description (format given above). \newline
+Include all the epics of your system here along with their descriptions. Use Epic ID like E1, E2, etc.
 
-\subsection{Non-Functional Requirements}
-Non-functional requirements cover all the remaining requirements, which are not covered by the functional requirements. They specify criteria that judge the operation of a system, rather than specific behaviors, for example: “Modified data in a database should be updated for all users accessing it within 2 seconds”. Some typical non-functional requirements include performance, scalability, availability, reliability, maintainability, usability and security. Functional requirements describe what the system should do while non-functional requirements describe how the system works. The Format for presenting these requirements is given in Table \ref{tab:functional_requirements} and Table \ref{tab:non_functional_requirements}.
+\subsection{User-Stories}
 
+User Stories are concise, user-focused descriptions of specific features derived from epics. They represent small, actionable requirements that can be completed within a short development cycle. Each user story captures what the user needs and why, ensuring the system is developed from the end user's perspective.
 
-\renewcommand{\thetable}{\thesection.\arabic{table}}
-\setcounter{table}{1}  
+It's \textit{Syntax} is:
 
-% ----- TABLE ----- 
-\begin{table}[H]
-    \centering
-    \setModernTableStyle % Applies the colors and spacing
-    
-    % Defining columns:     
-    \begin{xltabular}{\textwidth}{|c|X|c|}
-        \caption{Non Functional Requirements} \label{tab:non_functional_requirements} \\
-        \hline
-        % Header Row: Use \tableHeaderStyle
-        \tableHeaderStyle \bfseries{S. No.} & \bfseries{Non-Functional Requirements} & \bfseries{Category} \\ \thickhline
-        \endfirsthead
-        
-        \hline
-        \tableHeaderStyle \bfseries{S. No.} & \bfseries{Non-Functional Requirements} & \bfseries{Category} \\ \thickhline
-        \endhead
-        
-        % Data Rows
-        1 & & \\ \hline
-        2 & & \\ \hline
-        3 & & \\ \hline
-    \end{xltabular}
-\end{table}
+Description: As a \textit{<role>}, I want \textit{<goal>} so that \textit{<reason>}. \newline
+Acceptance Criteria: Given \textit{<context>}, When \textit{<action>}, Then \textit{<expected outcome>}.
 
+\subsubsection{User-story 1}
 
-\subsection{System Use Case Modeling}
-A use case defines a set of use-case instances, where each instance is a sequence of actions a system performs that yields an observable result of value to a particular actor. The functionality of a system is defined by different use cases, each of which represents a specific goal (to obtain the observable result of value) for a particular actor.
+User-story 1 (US 1), its title and its description (according to the format given above).
+Include all the user-stories of your system here along with their descriptions. Use user-story ID like E1-US1 (where E1 is epic that is broken down into US 1, 2 etc), E1-US2, etc.
 
-You should develop fully dressed use cases. One way of conceptualize correct use case is by imaging the user interface of all the features of your project.  This will help you to improve your project well in time.
+\subsection{Test-cases}
 
+Test Cases are defined scenarios that describe the specific inputs, execution conditions, and expected outcomes used to verify whether a particular feature of the system works as intended. They help ensure that requirements are met, identify defects, and validate the overall quality of the software.
 
-% \setcounter{figure}{0}
+\subsubsection{Test Case 1}
 
-% ----- FIGURE -----
-\begin{figure}[H]
-    \centering
-    % Change width as needed (0.5 - 1.0 is standard)
-    \includegraphics[width=0.9\textwidth]{figures/chapter2/Sample usecase.png} 
-    \caption{Sample Use Case diagram}
-    \label{fig:ex14}
-\end{figure}
+Provide all the relevant information like test-case description, inputs and expected output. You should provide the following table against each test-case.
 
-\subsubsection{Use Case 1 Title}
-Describe the use case (expected behavior of the software) in the form of steps and sub steps in the format given below.  You should also proved a brief description of user interface that will satisfy the requirement of each use case.
-
-% ----- TABLE -----
-% Using 3 columns to ensure equal width for Actor and System columns
-% Col 1: Label (Fixed) | Col 2: Actor/Data (X) | Col 3: System/Data (X)
 {
-\setlength{\parskip}{0pt}
-\begin{xltabular}{\textwidth}{| >{\bfseries}p{3.5cm} | X | X |}
-    \caption{Use Case Details} \label{tab:usecase_template} \\
-    \hline
-    \endfirsthead
-    \hline
-    \endhead
+\setModernTableStyle
+\begin{xltabular}{\textwidth}{|X|X|}
 
-    Use Case ID:            & \multicolumn{2}{l|}{UC-01} \\ \hline
-    Use Case Name:          & \multicolumn{2}{l|}{Login to System} \\ \hline
-    
-    % Metadata Rows: Merging Label+Value in 3rd column to fit 3-col layout
-    Created By:             & Hammad & \textbf{Last Updated:} Farhad \\ \hline
-    Date Created:           & 12-Jan & \textbf{Last Revision:} 16-Jan \\ \hline
-    
-    % Spanning rows for long descriptions
-    Actors:                 & \multicolumn{2}{p{9.5cm}|}{Admin, Student, Teacher} \\ \hline
-    Description:            & \multicolumn{2}{p{9.5cm}|}{Allows users to authenticate using firebase secure authentication system.} \\ \hline
-    Preconditions:          & \multicolumn{2}{p{9.5cm}|}{Internet connection must be active.} \\ \hline
-    Post conditions:        & \multicolumn{2}{p{9.5cm}|}{User is redirected to dashboard.} \\ \hline
-    
-    % Main Flow Section
-    Normal Flow             & \textbf{Actor}                & \textbf{System} \\ \hline
-    
-    % Flow numbering or empty first col
-            & 1. User enters email and password.            & 3. Validates credentials. \\ \hline
-            & 2. User clicks login.                         & 4. Redirects to home. \\ \hline
-    
-    Exceptions:     & \multicolumn{2}{l|}{Invalid Password: Show error.} \\ \hline
+    \hiderowcolors
+    \caption{Test Case 1} \label{tab:test_case_ch2_1} \\
+    \hline
+    \showrowcolors
+
+    Test ID: (E.g. E1-US1-TC1 etc.) & US ID: \\ \hline
+
+    \multicolumn{2}{|p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth\relax}|}
+    {Test Case Description: } \\ \hline
+
+    \multicolumn{2}{|p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth\relax}|}
+    {Inputs:} \\ \hline
+
+    \multicolumn{2}{|p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth\relax}|}
+    {Expected Result:} \\ \hline
+
 \end{xltabular}
 }
 
-(Add further use cases in the given format)
-
-\subsection{System Sequence diagrams}
-Sequence diagrams are created to show the sequence of events among user and the system to complete an action / use case. A sample is presented in Fig \ref{fig:ex13}.
-
-% ----- FIGURE ----- 
-\begin{figure}[H]
-    \centering
-    % Change width as needed (0.5 - 1.0 is standard)
-    \includegraphics[width=0.6\textwidth]{figures/chapter2/image13.png} 
-    \caption{Sample SSD}
-    \label{fig:ex13}
-\end{figure}
-
-You are required to provide SSD of all the uses cases that you have provided above.
-
-
-
-\subsection{Domain Model}
-Part of your initial architectural modeling efforts, particularly for a business application, will likely include the development of high-level domain model as you see in Fig. 3.3. This model should be very slim, capturing the main business entities and the relationships between them. Some people consider this type of model to be an initial requirements model instead of an initial architecture model.
-
-% ----- FIGURE ----- 
-\begin{figure}[H]
-    \centering
-    % Change width as needed (0.5 - 1.0 is standard)
-    \includegraphics[width=0.7\textwidth]{figures/chapter2/image07.png} 
-    \caption{Sample Domain Model}
-    \label{fig:ex7}
-\end{figure}
-
-
 \subsection{User Interface Design (Prototypes)}
+
 User Interface (UI) Design focuses on anticipating what users might need to do and ensuring that the interface has elements that are easy to access, understand, and use to facilitate those actions. UI brings together concepts from interaction design, visual design, and information architecture.
 
-You should describe the UI design in such a way that it remains simple and consistent along different views. Common GUI elements are shown in the Figure \ref{fig:ex12}. You should describe the UI design of each page.
-
-% ----- FIGURE ----- 
-\begin{figure}[H]
-    \centering
-    % Change width as needed (0.5 - 1.0 is standard)
-    \includegraphics[width=0.8\textwidth]{figures/chapter2/image12.png} 
-    \caption{Common GUI elements}
-    \label{fig:ex12}
-\end{figure}
-
-
-
-Example Login Page as shown in Figure \ref{fig:ex9}. will contain one text field and one password field. Max length of text field is 8 and min is 4 whereas maximum length off password is 6 and minimum is 3.
+You should describe the UI design in such a way that it remains simple and consistent along different views. Common GUI elements are shown in the Figure \ref{fig:common_gui_elements}. You should describe the UI design of each page.
 
 % ----- FIGURE -----
 \begin{figure}[H]
     \centering
     % Change width as needed (0.5 - 1.0 is standard)
-    \includegraphics[width=0.5\textwidth]{figures/chapter2/image09.png} 
-    \caption{Example Login Page UI Design}
-    \label{fig:ex9}
+    \includegraphics[width=1\textwidth]{figures/chapter2/image12.png} 
+    \caption{Common GUI elements}
+    \label{fig:common_gui_elements}
 \end{figure}
 
-\setcounter{chapter}{2}            
+Example Login Page as shown in Figure \ref{fig:login_page} will contain one text field and one password field. Max length of text field is 8 and min is 4 whereas maximum length off password is 6 and minimum is 3.
+
+% ----- FIGURE -----
+\begin{figure}[H]
+    \centering
+    % Change width as needed (0.5 - 1.0 is standard)
+    \includegraphics[width=0.6\textwidth]{figures/chapter2/image09.png} 
+    \caption{Example Login Page UI Design}
+    \label{fig:login_page}
+\end{figure}
+
+\subsection{Traceability  Matrix}
+
+Traceability Matrix is a structured table that establishes the relationship between different artifacts of the system, including Epics, User Stories, Test Cases, and User Interfaces (UIs) as shown in table \ref{tab:epic_mapping}. It ensures that each epic is broken down into user stories, validated through test cases, and supported by appropriate UI components. This matrix helps maintain consistency, verifies coverage of requirements, and ensures that no functionality is missed during development.
+
+{
+\setModernTableStyle 
+\begin{xltabular}{\textwidth}{|l|X|X|X|}
+    \hiderowcolors
+    
+    \caption{Traceability Matrix}
+    \label{tab:epic_mapping} \\
+    \hline
+    
+    \tableHeaderStyle Epic & \textbf{User-Story} & \textbf{Test-case} & \textbf{UI} \\ \thickhline
+    \endfirsthead
+    
+    \tableHeaderStyle Epic & \textbf{User-Story} & \textbf{Test-case} & \textbf{UI} \\ \thickhline
+    \endhead
+    \showrowcolors
+    
+    \endfoot
+    
+    \endlastfoot
+
+    E1  &  
+    E1-US1 \newline E1-US2 \newline . \newline . \newline .  &  
+    E1-US1-TC1 \newline E1-US1-TC2 \newline . \newline . \newline .  &  
+    E1-US1-UI1 \newline E1-US1-UI2 \newline . \newline . \newline .  \\ \hline
+    
+        &    &    &    \\ \hline
+    
+        &    &    &    \\ \hline
+    
+\end{xltabular}
+}
+

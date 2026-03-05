@@ -91,6 +91,11 @@
 \usepackage{xltabular} % For tables that break across pages and use X columns
 \usepackage[titles]{tocloft} % Fix TOC formatting
 
+% Force minimum space before xltabular so tables don't orphan headers
+\usepackage{etoolbox}
+\usepackage{needspace}
+\BeforeBeginEnvironment{xltabular}{\needspace{8\baselineskip}}
+
 % ============================== 
 % Header/Footer Control
 % ============================== 
