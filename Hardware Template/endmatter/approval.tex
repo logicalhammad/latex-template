@@ -1,29 +1,7 @@
 % ==============================================================================
-% Ending / Back Matter
-% Includes: Bibliography, Plagiarism Report, Approval Certificate
+% Report Approval Certificate
 % ==============================================================================
 
-% ==============================
-% Bibliography
-% ==============================
-\printbibliography[heading=bibintoc]
-
-\clearpage
-
-% ==============================
-% Plagiarism Report
-% ==============================
-\chapter*{Plagiarism Report}
-\addcontentsline{toc}{chapter}{Plagiarism Report}
-
-\noindent
-Attached plagiarism report here that can be obtained from the library.
-
-\clearpage
-
-% ==============================
-% Report Approval Certificate
-% ==============================
 \chapter*{Report Approval Certificate}
 
 \noindent
@@ -58,20 +36,6 @@ The report of the project, “Title” has been approved based on the following 
 
 \vspace{2cm}
 
-% ------------------------------
-% Examiners Signatures
-% ------------------------------
-\begin{center}
-    \begin{tabularx}{\textwidth}{X X X}
-        \centering 
-        \shortstack{\underline{\hspace{4cm}} \\ Name \& Signature \\(Examiner 1)} &
-        \centering 
-        \shortstack{\underline{\hspace{4cm}} \\ Name \& Signature \\(Examiner 2)} &
-        \centering 
-        \shortstack{\underline{\hspace{4cm}} \\ Name \& Signature \\(Examiner 3)}
-    \end{tabularx}
-\end{center}
-
 \vspace{1.5cm}
 
 % ------------------------------
@@ -80,3 +44,5 @@ The report of the project, “Title” has been approved based on the following 
 \begin{center}
     \shortstack{\underline{\hspace{4cm}} \\ Name \& Signature \\(Supervisor)}
 \end{center}
+
+% \includepdf[pages=-, pagecommand={\thispagestyle{empty}}]{endmatter/approval.pdf}
