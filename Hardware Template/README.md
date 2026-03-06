@@ -161,7 +161,7 @@ Start writing your content in:
 The text inside the \label{ } is used to reference the figure in the text, however this text is not visible in the document.
 
 ```latex
-As shown in Figure~\ref{fig:unique_label_name}, note that captions are grey and italicized automatically, and the numbering is automatic...
+As shown in Figure~\ref{fig:unique_label_name}, note that captions are dark blue and italicized automatically, and the numbering is automatic...
 ```
 
 ---

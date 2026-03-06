@@ -36,8 +36,9 @@
 \usepackage[table]{xcolor}
 \usepackage{graphicx}
 \usepackage{caption}
-\DeclareCaptionFont{gray}{\color{gray}}
-\captionsetup{font={it,gray}}
+\definecolor{captionblue}{HTML}{1F4E79} % Dark blue for captions (like MS Word)
+\DeclareCaptionFont{captionblue}{\color{captionblue}}
+\captionsetup{font={it,captionblue}}
 % \captionsetup[table]{position=top, skip=5pt}
 % \captionsetup[figure]{position=bottom, skip=5pt}
 \usepackage{subcaption}
@@ -198,7 +199,7 @@
 % ============================== 
 \usepackage{titlesec}
 
-% Chapter (First-Level Heading)
+% Chapter (Chapter Heading)
 \titleformat{\chapter}
   {\normalfont\bfseries\fontsize{16}{18}\selectfont}
   {\thechapter.}
@@ -210,7 +211,7 @@
   {0pt}
   {24pt}
 
-% Section (Second-Level Heading)
+% Section (First-Level Heading)
 \titleformat{\section}
   {\normalfont\bfseries\fontsize{16}{18}\selectfont}
   {\thesection.}
@@ -222,7 +223,7 @@
   {24pt}
   {12pt}
 
-% Subsection (Third-Level Heading)
+% Subsection (Second-Level Heading)
 \titleformat{\subsection}
   {\normalfont\bfseries\fontsize{14}{16}\selectfont}
   {\thesubsection.}
@@ -234,14 +235,14 @@
   {24pt}
   {12pt}
 
-% Subsubsection (Fourth-Level Heading)
+% Subsubsection (Third-Level Heading)
 \titleformat{\subsubsection}
-  {\normalfont\bfseries\fontsize{13}{15}\selectfont}
+  {\normalfont\bfseries\fontsize{12}{14}\selectfont}
   {\thesubsubsection.}
   {1em}
   {}
 
-% Custom Item Heading
+% Custom Item Heading (Fourth-Level Heading)
 \newcounter{itemheading}[subsubsection]
 \renewcommand{\theitemheading}{\thesubsubsection.\alph{itemheading}}
 \newcommand{\itemheading}[1]{%
