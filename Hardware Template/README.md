@@ -258,7 +258,27 @@ This algorithm was proposed by \cite{unique_key}.
 
 ## 🧱 Other Features
 
-* **Code Snippets**: Use `lstlisting` for code.
+### 💻 Code Snippets (lstlisting)
+You can include source code in your document using the `lstlisting` environment. We have configured it to look modern with syntax highlighting, line numbers, and a nice background.
+
+#### 📌 Supported Languages
+The template natively supports many languages including: C, C++, Java, Python, HTML, XML, SQL, Bash.
+In addition, we have explicitly added custom support for:
+* **JSON** (`language=JSON`)
+* **JavaScript** (`language=JavaScript`)
+* **CSS** (`language=CSS`)
+* **Dart** (`language=Dart`)
+
+#### 📌 Code Snippet Template
+
+```latex
+\begin{lstlisting}[language=Python, caption=Example Code, label=code:python_example]
+def hello_world():
+    print("Hello, World!")
+\end{lstlisting}
+```
+
+### 🧮 Math & Formatting
 * **Math**: Use standard math environments like `\begin{equation} ... \end{equation}`.
 * **Spacing**: Paragraphs and lines are already spaced according to university guidelines.
 
